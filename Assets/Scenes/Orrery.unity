@@ -211,7 +211,7 @@ MonoBehaviour:
     GravityConstant: 0.1
   VelocityHandle: {fileID: 389432181}
   VelocityHandleLengthScale: 0
-  TimeScale: 1
+  TimeScale: 500000
   OrbitData:
     GravConst: 1
     Position:
@@ -323,7 +323,8 @@ LineRenderer:
   m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
-  m_Materials: []
+  m_Materials:
+  - {fileID: 2100000, guid: 75d54149b98410140bfc084567ebd852, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -908,7 +909,7 @@ MonoBehaviour:
     RangeMlt: 1
     Color: {r: 1, g: 1, b: 1, a: 1}
     Type: 0
-  MainAttractorMaterial: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  MainAttractorMaterial: {fileID: 2100000, guid: 75d54149b98410140bfc084567ebd852, type: 2}
 --- !u!4 &446493818
 Transform:
   m_ObjectHideFlags: 0
@@ -1160,7 +1161,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 3bfd3ee285d6d68459ecba5ece681c6b, type: 2}
+  - {fileID: 2100000, guid: 75d54149b98410140bfc084567ebd852, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

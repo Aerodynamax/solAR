@@ -36,7 +36,7 @@ namespace SimpleKeplerOrbits
 		/// The time scale multiplier.
 		/// </summary>
 		[Tooltip("The time scale multiplier.")]
-		public float TimeScale = 1f;
+		public float TimeScale = 500000f;
 
 		/// <summary>
 		/// The orbit data.

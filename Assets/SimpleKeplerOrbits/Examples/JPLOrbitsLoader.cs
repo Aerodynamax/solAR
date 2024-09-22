@@ -292,7 +292,7 @@ namespace SimpleKeplerOrbits.Examples
 				body.enabled = false;
 			}
 
-			var mat = data.Type == 1 ? MainAttractorMaterial : null;
+			var mat = MainAttractorMaterial;
 			SetBodyColorAndDiameter(bodyTransform, data.Color, mat, (float)data.Diameter, ScalePerDiameter);
 			body.gameObject.SetActive(true);
 			return body;
