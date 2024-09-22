@@ -14,7 +14,7 @@ namespace SimpleKeplerOrbits
 		/// <summary>
 		/// Normal of ecliptic plane.
 		/// </summary>
-		public static readonly Vector3d EclipticNormal = new Vector3d(0, 0, 1);
+		public static readonly Vector3d EclipticNormal = new Vector3d(0, 1, 0);
 
 		/// <summary>
 		/// Up direction on ecliptic plane (y-axis on xy ecliptic plane).
