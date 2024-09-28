@@ -276,13 +276,13 @@ namespace SimpleKeplerOrbits.Examples
 			body.AttractorSettings.AttractorObject = attractor == null ? null : attractor.transform;
 			body.OrbitData = new KeplerOrbitData(
 				eccentricity: data.EC,
-				semiMajorAxis: data.A * unitsPerAU * 1495978.70700,
+				semiMajorAxis: data.A * unitsPerAU,
 				meanAnomalyDeg: data.MA,
 				inclinationDeg: data.IN,
 				argOfPerifocusDeg: data.W,
 				ascendingNodeDeg: data.OM,
 				attractorMass: body.AttractorSettings.AttractorMass,
-				gConst: compensatedGConst);
+				gConst: compensatedGConst); //  * 1495978.70700
 			if (attractor != null && data.A > 0)
 			{
 				body.ForceUpdateViewFromInternalState();
@@ -311,7 +311,7 @@ namespace SimpleKeplerOrbits.Examples
 				}
 				else
 				{
-					var scale = diameter / 100; //  Mathf.Log10(diameter + 1.3f) * scaleMlt;
+					var scale = Mathf.Log10(diameter + 1.3f) * scaleMlt; // diameter / 100;
 					renderer.transform.localScale = new Vector3(scale, scale, scale);
 				}
 			}
