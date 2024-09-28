@@ -266,17 +266,17 @@ namespace SimpleKeplerOrbits.Examples
 			{
 				// By default MLT value is 1,
 				// but for moons it may be larger than 1 for better visualization.
-				unitsPerAU *= data.RangeMlt;
+				unitsPerAU = 1d; // *= data.RangeMlt;
 			}
 
 			// G constant is used as free parameter to fixate orbits periods values while SemiMajor axis parameter is adjusted for the scene.
-			double compensatedGConst = GConstant / Math.Pow(AU / unitsPerAU, 3d);
+			double compensatedGConst = GConstant /  Math.Pow(AU / unitsPerAU, 3d);
 
 			body.AttractorSettings.GravityConstant = (float)compensatedGConst;
 			body.AttractorSettings.AttractorObject = attractor == null ? null : attractor.transform;
 			body.OrbitData = new KeplerOrbitData(
 				eccentricity: data.EC,
-				semiMajorAxis: data.A * unitsPerAU,
+				semiMajorAxis: data.A * unitsPerAU * 1495978.70700,
 				meanAnomalyDeg: data.MA,
 				inclinationDeg: data.IN,
 				argOfPerifocusDeg: data.W,
@@ -311,7 +311,7 @@ namespace SimpleKeplerOrbits.Examples
 				}
 				else
 				{
-					var scale = Mathf.Log10(diameter + 1.3f) * scaleMlt;
+					var scale = diameter / 100; //  Mathf.Log10(diameter + 1.3f) * scaleMlt;
 					renderer.transform.localScale = new Vector3(scale, scale, scale);
 				}
 			}
