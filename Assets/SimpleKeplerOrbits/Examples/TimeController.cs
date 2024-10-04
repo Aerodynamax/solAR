@@ -40,7 +40,7 @@ namespace SimpleKeplerOrbits.Examples
 		[SerializeField]
 		private int _epochMinute;
 
-		private float _currentTimeScale = 1f;
+		private float _currentTimeScale = 500000f;
 
 		private SpawnNotifier _spawnNotifier;
 		private DateTime      _epochDate;

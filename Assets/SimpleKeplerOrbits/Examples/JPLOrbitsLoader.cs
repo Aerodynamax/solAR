@@ -293,6 +293,13 @@ namespace SimpleKeplerOrbits.Examples
 			}
 
 			var mat = MainAttractorMaterial;
+
+			var bodyMaterial = Resources.Load<Material>("Materials/" + body.name);
+			if (bodyMaterial != null)
+            {
+				mat = bodyMaterial;
+            }
+
 			SetBodyColorAndDiameter(bodyTransform, data.Color, mat, (float)data.Diameter, ScalePerDiameter);
 			body.gameObject.SetActive(true);
 			return body;
@@ -304,7 +311,7 @@ namespace SimpleKeplerOrbits.Examples
 			if (renderer != null)
 			{
 				renderer.material       = mat;
-				renderer.material.color = col;
+				//renderer.material.color = col;
 				if (diameter <= 0)
 				{
 					renderer.enabled = false;
