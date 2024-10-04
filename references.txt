@@ -12,3 +12,6 @@ https://github.com/De-Panther/unity-webxr-export
 
 Unity Kepler Orbit Asset
 https://assetstore.unity.com/packages/tools/physics/simple-kepler-orbits-97048
+
+Simple Web Server
+https://simplewebserver.org/download.html

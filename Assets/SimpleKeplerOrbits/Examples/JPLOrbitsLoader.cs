@@ -266,7 +266,7 @@ namespace SimpleKeplerOrbits.Examples
 			{
 				// By default MLT value is 1,
 				// but for moons it may be larger than 1 for better visualization.
-				unitsPerAU = 1d; // *= data.RangeMlt;
+				unitsPerAU *= data.RangeMlt;
 			}
 
 			// G constant is used as free parameter to fixate orbits periods values while SemiMajor axis parameter is adjusted for the scene.
@@ -282,7 +282,7 @@ namespace SimpleKeplerOrbits.Examples
 				argOfPerifocusDeg: data.W,
 				ascendingNodeDeg: data.OM,
 				attractorMass: body.AttractorSettings.AttractorMass,
-				gConst: compensatedGConst); //  * 1495978.70700
+				gConst: compensatedGConst);
 			if (attractor != null && data.A > 0)
 			{
 				body.ForceUpdateViewFromInternalState();
@@ -311,7 +311,7 @@ namespace SimpleKeplerOrbits.Examples
 				}
 				else
 				{
-					var scale = Mathf.Log10(diameter + 1.3f) * scaleMlt; // diameter / 100;
+					var scale = Mathf.Log(diameter + 1.3f) * scaleMlt; // Math.Sqrt(diameter) doesn't look bad either
 					renderer.transform.localScale = new Vector3(scale, scale, scale);
 				}
 			}
