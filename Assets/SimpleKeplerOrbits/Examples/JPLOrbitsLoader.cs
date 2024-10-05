@@ -318,7 +318,7 @@ namespace SimpleKeplerOrbits.Examples
 				}
 				else
 				{
-					var scale = Mathf.Log(diameter + 1.3f) * scaleMlt; // Math.Sqrt(diameter) doesn't look bad either
+					var scale = Mathf.Log10(diameter + 1.3f) * scaleMlt; // Math.Sqrt(diameter) doesn't look bad either
 					renderer.transform.localScale = new Vector3(scale, scale, scale);
 				}
 			}
