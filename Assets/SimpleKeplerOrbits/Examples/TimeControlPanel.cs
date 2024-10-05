@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Globalization;
+using Unity.Mathematics;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -21,18 +22,21 @@ namespace SimpleKeplerOrbits.Examples
 		[SerializeField] private InputField     _inputMin;
 		[SerializeField] private InputField     _inputSec;
 		[SerializeField] private Button         _buttonSetNow;
-		[SerializeField] private float          _maxTimeScale = 5e7f;
+		[SerializeField] private float          _maxTimeScale =  5e7f;
+        [SerializeField] private float			_minTimeScale = -5e7f;
 
-		private bool _isRefreshing;
+        private bool _isRefreshing;
 
 		private void Awake()
 		{
-			_sliderTimescale.minValue = -Mathf.Abs(_maxTimeScale);
+			_sliderTimescale.minValue = Mathf.Abs(_minTimeScale);
 			_sliderTimescale.maxValue = Mathf.Abs(_maxTimeScale);
-			_sliderTimescale.value    = 1f;
+			_sliderTimescale.value    = 500000f;
 			_sliderTimescale.onValueChanged.AddListener((v) =>
 			{
 				if (_isRefreshing) return;
+
+				v = math.round(v);
 
 				_isRefreshing = true;
 				_timeController.SetTimescale(v);
@@ -43,9 +47,9 @@ namespace SimpleKeplerOrbits.Examples
 			_buttonResetTimescale.onClick.AddListener(() =>
 			{
 				_isRefreshing = true;
-				_timeController.SetTimescale(1f);
-				_sliderTimescale.value = 1f;
-				_inputTimescale.text   = "1";
+				_timeController.SetTimescale(500000f);
+				_sliderTimescale.value = 500000f;
+				_inputTimescale.text   = "500000";
 				_isRefreshing          = false;
 			});
 
@@ -55,8 +59,8 @@ namespace SimpleKeplerOrbits.Examples
 
 				_isRefreshing = true;
 				var f = ParseFloat(str);
-				_timeController.SetTimescale(f);
-				_sliderTimescale.value = f;
+				_timeController.SetTimescale(500000);
+				_sliderTimescale.value = 500000;
 				_isRefreshing          = false;
 			});
 
