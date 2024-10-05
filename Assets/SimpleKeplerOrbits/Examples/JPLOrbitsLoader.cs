@@ -346,6 +346,27 @@ namespace SimpleKeplerOrbits.Examples
 				}
 			}
 
+			if (data.NEO)
+            {
+				body.tag = "NEO";
+            }
+			else if (data.BodyName == "Sun")
+            {
+				body.tag = "Star";
+            }
+			else if (data.AttractorName == "Solar system barycenter" 
+				|| data.BodyName == "Earth-Moon barycenter" 
+				|| data.BodyName == "Pluton-Charon barycenter"
+				|| data.BodyName == "Earth"
+				|| data.BodyName == "Pluto")
+            {
+				body.tag = "Planet";
+            }
+			else if (data.AttractorName != "Solar system barycenter")
+			{
+				body.tag = "Moon";
+			}
+
 			SetBodyColorAndDiameter(bodyTransform, data.Color, mat, (float)data.Diameter, ScalePerDiameter);
 			body.gameObject.SetActive(true);
 			return body;
