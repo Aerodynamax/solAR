@@ -300,6 +300,46 @@ namespace SimpleKeplerOrbits.Examples
 				mat = bodyMaterial;
             }
 
+			var ringMaterial = Resources.Load<Material>("Materials/" + body.name + "_Rings");
+			if (ringMaterial != null)
+			{
+				var view = body.GetComponentInChildren<MeshRenderer>();
+				if (view)
+				{
+					var rings = view.transform.Find("Rings");
+					if (rings)
+					{
+						var ringsMesh = rings.GetComponentInChildren<MeshRenderer>();
+						if (ringsMesh)
+						{
+							ringsMesh.material = ringMaterial;
+							//ringsMesh.enabled = true;
+
+							ringsMesh.transform.eulerAngles = new Vector3((float)-data.IN, 0f, 0f);
+						}
+					}
+				}
+			}
+
+			var atmosphereMaterial = Resources.Load<Material>("Materials/" + body.name + "_Atmosphere");
+			if (atmosphereMaterial != null)
+			{
+				var view = body.GetComponentInChildren<MeshRenderer>();
+				if (view)
+				{
+					var atmosphere = view.transform.Find("Atmosphere");
+					if (atmosphere)
+					{
+						var atmosphereMesh = atmosphere.GetComponentInChildren<MeshRenderer>();
+						if (atmosphereMesh)
+						{
+							atmosphereMesh.material = atmosphereMaterial;
+							atmosphereMesh.enabled = true;
+						}
+					}
+				}
+			}
+
 			SetBodyColorAndDiameter(bodyTransform, data.Color, mat, (float)data.Diameter, ScalePerDiameter);
 			body.gameObject.SetActive(true);
 			return body;

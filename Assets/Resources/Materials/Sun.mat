@@ -57,7 +57,7 @@ Material:
     - _ColorIntensity: 2
     - _FlareDensity: 50
     - _FlarePower: 2
-    - _FlareSpeed: 1
+    - _FlareSpeed: 10
     - _QueueControl: 0
     - _QueueOffset: 0
     m_Colors: []
