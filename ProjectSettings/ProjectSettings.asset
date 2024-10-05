@@ -449,6 +449,7 @@ PlayerSettings:
   openGLRequireES32: 1
   m_TemplateCustomTags:
     DESCRIPTION: 
+    PRODUCT_DESCRIPTION: 
     WEBXR_POLYFILL_CONFIG: 
   mobileMTRendering:
     Android: 1
@@ -722,7 +723,7 @@ PlayerSettings:
   webGLDebugSymbols: 0
   webGLEmscriptenArgs: 
   webGLModulesDirectory: 
-  webGLTemplate: PROJECT:WebXR2020
+  webGLTemplate: PROJECT:WebXRFullView2020
   webGLAnalyzeBuildSize: 0
   webGLUseEmbeddedResources: 0
   webGLCompressionFormat: 2
