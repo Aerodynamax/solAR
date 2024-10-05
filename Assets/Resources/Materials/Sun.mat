@@ -54,7 +54,7 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _ColorIntensity: 1.5
+    - _ColorIntensity: 2
     - _FlareDensity: 50
     - _FlarePower: 2
     - _FlareSpeed: 1
