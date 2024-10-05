@@ -80,9 +80,15 @@ namespace SimpleKeplerOrbits.Examples
 			public Color Color = Color.white;
 
 			/// <summary>
-			/// Custom type param. Used to switch mesh material for body.
+			/// Whether this is a NEO, otherwise it will be a planet, moon or star
 			/// </summary>
-			public int Type = 0;
+			public bool NEO = false;
+
+			/// <summary>
+			/// Ring inclination for bodies with rings
+			/// </summary>
+			public double RingInclination = 0;
+
 		}
 
 		public enum LoadingType
@@ -313,9 +319,9 @@ namespace SimpleKeplerOrbits.Examples
 						if (ringsMesh)
 						{
 							ringsMesh.material = ringMaterial;
-							//ringsMesh.enabled = true;
+							ringsMesh.enabled = true;
 
-							ringsMesh.transform.eulerAngles = new Vector3((float)-data.IN, 0f, 0f);
+							ringsMesh.transform.eulerAngles = new Vector3(90f - (float)data.RingInclination, 0f, 0f);
 						}
 					}
 				}

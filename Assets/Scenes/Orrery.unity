@@ -665,7 +665,7 @@ MonoBehaviour:
   IsAllowedRangeScaleMltPerBody: 1
   AU: 149597870700
   BodyTemplate: {fileID: 142333819}
-  JsonData: {fileID: 4900000, guid: 3540d291d9a9291419504f05906fbd4b, type: 3}
+  JsonData: {fileID: 4900000, guid: 4ef48e69e53a83e4a8e48987052c5eae, type: 3}
   ElementsTable:
   - BodyName: Solar system barycenter
     AttractorName: 
@@ -679,7 +679,8 @@ MonoBehaviour:
     Diameter: 1
     RangeMlt: 1
     Color: {r: 1, g: 1, b: 1, a: 1}
-    Type: 0
+    NEO: 0
+    RingInclination: 0
   - BodyName: Sun
     AttractorName: Solar system barycenter
     AttractorMass: 2.684475e+27
@@ -692,7 +693,8 @@ MonoBehaviour:
     Diameter: 1
     RangeMlt: 1
     Color: {r: 1, g: 1, b: 1, a: 1}
-    Type: 0
+    NEO: 0
+    RingInclination: 0
   - BodyName: Mercury
     AttractorName: Solar system barycenter
     AttractorMass: 1.9885e+30
@@ -705,7 +707,8 @@ MonoBehaviour:
     Diameter: 1
     RangeMlt: 1
     Color: {r: 1, g: 1, b: 1, a: 1}
-    Type: 0
+    NEO: 0
+    RingInclination: 0
   - BodyName: Venus
     AttractorName: Solar system barycenter
     AttractorMass: 1.9885e+30
@@ -718,7 +721,8 @@ MonoBehaviour:
     Diameter: 1
     RangeMlt: 1
     Color: {r: 1, g: 1, b: 1, a: 1}
-    Type: 0
+    NEO: 0
+    RingInclination: 0
   - BodyName: Earth-Moon barycenter
     AttractorName: Solar system barycenter
     AttractorMass: 1.9885e+30
@@ -731,7 +735,8 @@ MonoBehaviour:
     Diameter: 1
     RangeMlt: 1
     Color: {r: 1, g: 1, b: 1, a: 1}
-    Type: 0
+    NEO: 0
+    RingInclination: 0
   - BodyName: Mars
     AttractorName: Solar system barycenter
     AttractorMass: 1.9885e+30
@@ -744,7 +749,8 @@ MonoBehaviour:
     Diameter: 1
     RangeMlt: 1
     Color: {r: 1, g: 1, b: 1, a: 1}
-    Type: 0
+    NEO: 0
+    RingInclination: 0
   - BodyName: Jupiter
     AttractorName: Solar system barycenter
     AttractorMass: 1.9885e+30
@@ -757,7 +763,8 @@ MonoBehaviour:
     Diameter: 1
     RangeMlt: 1
     Color: {r: 1, g: 1, b: 1, a: 1}
-    Type: 0
+    NEO: 0
+    RingInclination: 0
   - BodyName: Saturn
     AttractorName: Solar system barycenter
     AttractorMass: 1.9885e+30
@@ -770,7 +777,8 @@ MonoBehaviour:
     Diameter: 1
     RangeMlt: 1
     Color: {r: 1, g: 1, b: 1, a: 1}
-    Type: 0
+    NEO: 0
+    RingInclination: 0
   - BodyName: Uranus
     AttractorName: Solar system barycenter
     AttractorMass: 1.9885e+30
@@ -783,7 +791,8 @@ MonoBehaviour:
     Diameter: 1
     RangeMlt: 1
     Color: {r: 1, g: 1, b: 1, a: 1}
-    Type: 0
+    NEO: 0
+    RingInclination: 0
   - BodyName: Neptune
     AttractorName: Solar system barycenter
     AttractorMass: 1.9885e+30
@@ -796,7 +805,8 @@ MonoBehaviour:
     Diameter: 1
     RangeMlt: 1
     Color: {r: 1, g: 1, b: 1, a: 1}
-    Type: 0
+    NEO: 0
+    RingInclination: 0
   - BodyName: Pluto-Charon barycenter
     AttractorName: Solar system barycenter
     AttractorMass: 1.9885e+30
@@ -809,7 +819,8 @@ MonoBehaviour:
     Diameter: 1
     RangeMlt: 1
     Color: {r: 1, g: 1, b: 1, a: 1}
-    Type: 0
+    NEO: 0
+    RingInclination: 0
   - BodyName: Earth
     AttractorName: Earth-Moon barycenter
     AttractorMass: 1.1113551e+19
@@ -822,7 +833,8 @@ MonoBehaviour:
     Diameter: 1
     RangeMlt: 1
     Color: {r: 1, g: 1, b: 1, a: 1}
-    Type: 0
+    NEO: 0
+    RingInclination: 0
   - BodyName: Moon
     AttractorName: Earth-Moon barycenter
     AttractorMass: 5.97219e+24
@@ -835,7 +847,8 @@ MonoBehaviour:
     Diameter: 1
     RangeMlt: 1
     Color: {r: 1, g: 1, b: 1, a: 1}
-    Type: 0
+    NEO: 0
+    RingInclination: 0
   - BodyName: Phobos
     AttractorName: Mars
     AttractorMass: 6.4171e+23
@@ -848,7 +861,8 @@ MonoBehaviour:
     Diameter: 1
     RangeMlt: 1
     Color: {r: 1, g: 1, b: 1, a: 1}
-    Type: 0
+    NEO: 0
+    RingInclination: 0
   - BodyName: Deimos
     AttractorName: Mars
     AttractorMass: 6.4171e+23
@@ -861,7 +875,8 @@ MonoBehaviour:
     Diameter: 1
     RangeMlt: 1
     Color: {r: 1, g: 1, b: 1, a: 1}
-    Type: 0
+    NEO: 0
+    RingInclination: 0
   - BodyName: Io
     AttractorName: Jupiter
     AttractorMass: 1.89813e+27
@@ -874,7 +889,8 @@ MonoBehaviour:
     Diameter: 1
     RangeMlt: 1
     Color: {r: 1, g: 1, b: 1, a: 1}
-    Type: 0
+    NEO: 0
+    RingInclination: 0
   - BodyName: Europa
     AttractorName: Jupiter
     AttractorMass: 1.89813e+27
@@ -887,7 +903,8 @@ MonoBehaviour:
     Diameter: 1
     RangeMlt: 1
     Color: {r: 1, g: 1, b: 1, a: 1}
-    Type: 0
+    NEO: 0
+    RingInclination: 0
   - BodyName: Ganymede
     AttractorName: Jupiter
     AttractorMass: 1.89813e+27
@@ -900,7 +917,8 @@ MonoBehaviour:
     Diameter: 1
     RangeMlt: 1
     Color: {r: 1, g: 1, b: 1, a: 1}
-    Type: 0
+    NEO: 0
+    RingInclination: 0
   - BodyName: Callisto
     AttractorName: Jupiter
     AttractorMass: 1.89813e+27
@@ -913,7 +931,8 @@ MonoBehaviour:
     Diameter: 1
     RangeMlt: 1
     Color: {r: 1, g: 1, b: 1, a: 1}
-    Type: 0
+    NEO: 0
+    RingInclination: 0
   - BodyName: Mimas
     AttractorName: Saturn
     AttractorMass: 5.6834e+26
@@ -926,7 +945,8 @@ MonoBehaviour:
     Diameter: 1
     RangeMlt: 1
     Color: {r: 1, g: 1, b: 1, a: 1}
-    Type: 0
+    NEO: 0
+    RingInclination: 0
   - BodyName: Enceladus
     AttractorName: Saturn
     AttractorMass: 5.6834e+26
@@ -939,7 +959,8 @@ MonoBehaviour:
     Diameter: 1
     RangeMlt: 1
     Color: {r: 1, g: 1, b: 1, a: 1}
-    Type: 0
+    NEO: 0
+    RingInclination: 0
   - BodyName: Tethys
     AttractorName: Saturn
     AttractorMass: 5.6834e+26
@@ -952,7 +973,8 @@ MonoBehaviour:
     Diameter: 1
     RangeMlt: 1
     Color: {r: 1, g: 1, b: 1, a: 1}
-    Type: 0
+    NEO: 0
+    RingInclination: 0
   - BodyName: Dione
     AttractorName: Saturn
     AttractorMass: 5.6834e+26
@@ -965,7 +987,8 @@ MonoBehaviour:
     Diameter: 1
     RangeMlt: 1
     Color: {r: 1, g: 1, b: 1, a: 1}
-    Type: 0
+    NEO: 0
+    RingInclination: 0
   - BodyName: Rhea
     AttractorName: Saturn
     AttractorMass: 5.6834e+26
@@ -978,7 +1001,8 @@ MonoBehaviour:
     Diameter: 1
     RangeMlt: 1
     Color: {r: 1, g: 1, b: 1, a: 1}
-    Type: 0
+    NEO: 0
+    RingInclination: 0
   - BodyName: Titan
     AttractorName: Saturn
     AttractorMass: 5.6834e+26
@@ -991,7 +1015,8 @@ MonoBehaviour:
     Diameter: 1
     RangeMlt: 1
     Color: {r: 1, g: 1, b: 1, a: 1}
-    Type: 0
+    NEO: 0
+    RingInclination: 0
   - BodyName: Hyperion
     AttractorName: Saturn
     AttractorMass: 5.6834e+26
@@ -1004,7 +1029,8 @@ MonoBehaviour:
     Diameter: 1
     RangeMlt: 1
     Color: {r: 1, g: 1, b: 1, a: 1}
-    Type: 0
+    NEO: 0
+    RingInclination: 0
   - BodyName: Iapetus
     AttractorName: Saturn
     AttractorMass: 5.6834e+26
@@ -1017,7 +1043,8 @@ MonoBehaviour:
     Diameter: 1
     RangeMlt: 1
     Color: {r: 1, g: 1, b: 1, a: 1}
-    Type: 0
+    NEO: 0
+    RingInclination: 0
   - BodyName: Phoebe
     AttractorName: Saturn
     AttractorMass: 5.6834e+26
@@ -1030,7 +1057,8 @@ MonoBehaviour:
     Diameter: 1
     RangeMlt: 1
     Color: {r: 1, g: 1, b: 1, a: 1}
-    Type: 0
+    NEO: 0
+    RingInclination: 0
   - BodyName: Pluto
     AttractorName: Pluto-Charon barycenter
     AttractorMass: 2.1607165e+19
@@ -1043,7 +1071,8 @@ MonoBehaviour:
     Diameter: 1
     RangeMlt: 1
     Color: {r: 1, g: 1, b: 1, a: 1}
-    Type: 0
+    NEO: 0
+    RingInclination: 0
   - BodyName: Charon
     AttractorName: Pluto-Charon barycenter
     AttractorMass: 1.307e+22
@@ -1056,7 +1085,8 @@ MonoBehaviour:
     Diameter: 1
     RangeMlt: 1
     Color: {r: 1, g: 1, b: 1, a: 1}
-    Type: 0
+    NEO: 0
+    RingInclination: 0
   MainAttractorMaterial: {fileID: 2100000, guid: 75d54149b98410140bfc084567ebd852, type: 2}
 --- !u!4 &446493818
 Transform:

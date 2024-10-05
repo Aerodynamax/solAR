@@ -64,6 +64,7 @@ namespace SimpleKeplerOrbits.Examples
 				_isRefreshing          = false;
 			});
 
+			/*
 			_inputYear.onEndEdit.AddListener(ApplyDateFromInputState);
 			_inputMonth.onEndEdit.AddListener(ApplyDateFromInputState);
 			_inputDay.onEndEdit.AddListener(ApplyDateFromInputState);
@@ -76,11 +77,12 @@ namespace SimpleKeplerOrbits.Examples
 				_timeController.SetCurrentGlobalTime();
 				RefreshTimestampDisplay();
 			});
+			*/
 		}
 
 		private void Update()
 		{
-			RefreshTimestampDisplay();
+			//RefreshTimestampDisplay();
 		}
 
 		private void RefreshTimestampDisplay()
