@@ -289,6 +289,7 @@ namespace SimpleKeplerOrbits.Examples
 				ascendingNodeDeg: data.OM,
 				attractorMass: body.AttractorSettings.AttractorMass,
 				gConst: compensatedGConst);
+			
 			if (attractor != null && data.A > 0)
 			{
 				body.ForceUpdateViewFromInternalState();
@@ -298,6 +299,27 @@ namespace SimpleKeplerOrbits.Examples
 				body.enabled = false;
 			}
 
+			if (data.NEO)
+			{
+				body.tag = "NEO";
+			}
+			else if (data.BodyName == "Sun")
+			{
+				body.tag = "Star";
+			}
+			else if (data.AttractorName == "Solar system barycenter"
+				|| data.BodyName == "Earth-Moon barycenter"
+				|| data.BodyName == "Pluton-Charon barycenter"
+				|| data.BodyName == "Earth"
+				|| data.BodyName == "Pluto")
+			{
+				body.tag = "Planet";
+			}
+			else if (data.AttractorName != "Solar system barycenter")
+			{
+				body.tag = "Moon";
+			}
+
 			var mat = MainAttractorMaterial;
 
 			var bodyMaterial = Resources.Load<Material>("Materials/" + body.name);
@@ -305,6 +327,21 @@ namespace SimpleKeplerOrbits.Examples
             {
 				mat = bodyMaterial;
             }
+
+			var moonMaterial = Resources.Load<Material>("Materials/Moon");
+			var outerMoonMaterial = Resources.Load<Material>("Materials/OuterMoon");
+
+			if (moonMaterial != null && outerMoonMaterial != null && body.tag == "Moon")
+			{
+				if (data.AttractorName == "Earth-Moon barycenter" || data.AttractorName == "Mars")
+				{
+					mat = moonMaterial;
+				}
+				else
+                {
+					mat = outerMoonMaterial;
+				}
+			}
 
 			var ringMaterial = Resources.Load<Material>("Materials/" + body.name + "_Rings");
 			if (ringMaterial != null)
@@ -346,26 +383,7 @@ namespace SimpleKeplerOrbits.Examples
 				}
 			}
 
-			if (data.NEO)
-            {
-				body.tag = "NEO";
-            }
-			else if (data.BodyName == "Sun")
-            {
-				body.tag = "Star";
-            }
-			else if (data.AttractorName == "Solar system barycenter" 
-				|| data.BodyName == "Earth-Moon barycenter" 
-				|| data.BodyName == "Pluton-Charon barycenter"
-				|| data.BodyName == "Earth"
-				|| data.BodyName == "Pluto")
-            {
-				body.tag = "Planet";
-            }
-			else if (data.AttractorName != "Solar system barycenter")
-			{
-				body.tag = "Moon";
-			}
+
 
 			SetBodyColorAndDiameter(bodyTransform, data.Color, mat, (float)data.Diameter, ScalePerDiameter);
 			body.gameObject.SetActive(true);
