@@ -6,13 +6,12 @@ using UnityEngine.UI;
 public class ToggleOrbits : MonoBehaviour
 {
 
-    Toggle m_Toggle;
+    [SerializeField] Toggle m_Toggle;
     public GameObject m_camera;
     LineRenderer[] childRenderers;
 
     void Start()
     {
-        m_Toggle = GetComponent<Toggle>();
         m_Toggle.onValueChanged.AddListener(delegate {
             ToggleValueChanged(m_Toggle);
         });
