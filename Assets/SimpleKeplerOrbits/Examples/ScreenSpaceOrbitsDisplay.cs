@@ -90,7 +90,7 @@ namespace SimpleKeplerOrbits.Examples
 
 			foreach (var item in _targets)
 			{
-				if (!item.Body.enabled || !item.Body.gameObject.activeInHierarchy) continue;
+				if (!item.Body.enabled || !item.Body.gameObject.activeInHierarchy || !item.Body.GetComponentInChildren<MeshRenderer>().enabled) continue;
 				var orbitPoints = item.OrbitPoints;
 				item.Body.OrbitData.GetOrbitPointsNoAlloc(ref orbitPoints, item.LineDisplay.OrbitPointsCount, new Vector3d(), item.LineDisplay.MaxOrbitWorldUnitsDistance);
 				item.OrbitPoints = orbitPoints;
